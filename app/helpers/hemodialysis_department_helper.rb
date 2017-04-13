@@ -1,0 +1,2 @@
+module HemodialysisDepartmentHelper
+end

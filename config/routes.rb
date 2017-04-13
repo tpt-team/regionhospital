@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :hemodialysis_department, only: :index, as: :hemodialysis
   resources :allergy_department, only: :index, as: :allergy
   resources :vascular_surgery, only: :index, as: :vascular
   resources :traumatological_department, only: :index, as: :traumatological
