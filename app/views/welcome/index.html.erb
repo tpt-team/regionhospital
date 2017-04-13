@@ -1,16 +1,14 @@
 <section class='welcome-section'>
-  <ul>
-    <li class='welcome-section__element'>
-      <%= link_to 'Oртопедо-травматологічне відділення', traumatological_index_path %>
-    </li>
-    <li class='welcome-section__element'>
-      <%= link_to 'Cудинна хірургія', vascular_index_path %>
-    </li>
-    <li class='welcome-section__element'>
-      <%= link_to 'Алергологічне відділення', allergy_index_path %>
-    </li>
-    <li class='welcome-section__element'>
-      <%= link_to 'Відділення гемодіалізу', hemodialysis_path %>
-    </li>
-  </ul>
+  <%= link_to traumatological_index_path do%>
+    <span> Oртопедо-травматологічне відділення </span>
+  <% end %>
+  <%= link_to vascular_index_path do%>
+    <span> Cудинна хірургія </span>
+  <% end %>
+  <%= link_to allergy_index_path do%>
+    <span> Алергологічне відділення </span>
+  <% end %>
+  <%= link_to hemodialysis_path do%>
+    <span> Відділення гемодіалізу </span>
+  <% end %>
 </section>
