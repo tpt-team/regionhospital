@@ -1,6 +1,16 @@
-<h1>Головна сторінка сайту</h1>
-
-<%= link_to 'Oртопедо-травматологічне відділення', traumatological_index_path %></br>
-<%= link_to 'Cудинна хірургія', vascular_index_path %></br>
-<%= link_to 'Алергологічне відділення', allergy_index_path %></br>
-<%= link_to 'Відділення гемодіалізу', hemodialysis_path %>
+<section class='welcome-section'>
+  <ul>
+    <li class='welcome-section__element'>
+      <%= link_to 'Oртопедо-травматологічне відділення', traumatological_index_path %>
+    </li>
+    <li class='welcome-section__element'>
+      <%= link_to 'Cудинна хірургія', vascular_index_path %>
+    </li>
+    <li class='welcome-section__element'>
+      <%= link_to 'Алергологічне відділення', allergy_index_path %>
+    </li>
+    <li class='welcome-section__element'>
+      <%= link_to 'Відділення гемодіалізу', hemodialysis_path %>
+    </li>
+  </ul>
+</section>
