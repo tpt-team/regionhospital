@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  devise_for :users
+  devise_for :users, :controllers => {registrations: :registrations}
   get 'persons/profile', as: 'user_root'
 end
