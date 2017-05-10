@@ -1,34 +1,24 @@
-<h2>Sign up</h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+  <div class="logo-space"></div>
+  <div class="authForm">
+    <div class="formLists">
+      <div class="member-list-newAccount">
+        <div class="form-title">
+          <h1>New Account</h1>
+        </div>
+        <form id="registerForm" class="newAccount" layout="column" ng-submit="onSubmit()">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.check_box :doctor %>
-    <%= f.label :doctor %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+          <%= f.email_field :email, placeholder: 'Email' %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: 'Password'%>
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Confirmation password' %>
+          <div class="signup-class">
+            <%= f.check_box :doctor %>
+            <%= f.label :doctor %>
+          </div>
+          <button class="sing_up" type="submit" name="signup" action="f.submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
