@@ -4,6 +4,7 @@
     <span><%= current_user.email %></span>
     <li><%= link_to 'Вийти', destroy_user_session_path, :method => :delete %></li>
     <li><%= link_to 'Моя сторінка', user_root_path %></li>
+    <li><%= link_to 'My Blog', controller: 'articles' %></li>
   <% else %>
     <li><%= link_to 'Зареєструватися', new_user_registration_path %></li>
     <li><%= link_to 'Увійти', new_user_session_path %></li>
