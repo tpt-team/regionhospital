@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => {registrations: :registrations}
   get 'persons/profile', as: 'user_root'
+
+  resources :doctors, only: :index
 end

@@ -1,10 +1,16 @@
 class User < ApplicationRecord
   has_many :articles
   has_many :comments
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :medical_cards
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   mount_uploader :avatar, AvatarUploader
+
+  scope :doctors, -> { where(doctor: true) }
+
+  def doctor?
+    doctor
+  end
 end
