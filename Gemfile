@@ -19,6 +19,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-growl-rails'
 gem 'slim-rails', '~> 3.1', '>= 3.1.1'
 gem 'will_paginate'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'pry'

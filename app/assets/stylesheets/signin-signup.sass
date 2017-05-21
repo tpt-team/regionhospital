@@ -3,7 +3,7 @@ body
   font-family: 'Lato', sans-serif
 
 .logo-space
-  height: 250px
+  height: 150px
 
 .authForm
   position: relative
@@ -81,6 +81,12 @@ input
   font-weight: 300
   padding: 0 0 0 5px
   margin: 20px
+
+input[type="file"]
+  border: none
+  &:active, &:focus
+    border: none
+    outline: 0
 
 input:focus
   border-bottom: 2px solid rgb(3, 169, 245)

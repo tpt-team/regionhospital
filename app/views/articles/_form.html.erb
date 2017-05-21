@@ -14,18 +14,16 @@
     </div>
   <% end %>
 
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+  <div class='article_new_title'>
+    <%= f.text_field :title, placeholder: 'Заголовок'%>
+  </div>
 
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
+  <div class='article_new_text'>
+    <%= f.text_area :text, placeholder: 'Стаття'%>
+  </div>
 
-  <p>
+  <div class='article_create'>
     <%= f.submit %>
-  </p>
+  </div>
 
 <% end %>
