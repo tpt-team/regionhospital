@@ -1,0 +1,13 @@
+doctype 5
+html lang='en' class='no-js'
+  head
+    title Regionhospital
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body.container
+    - if notice
+      javascript:
+        $.notify( { message: "#{notice}" }, { type: 'notification' } )
+    = render 'partials/navbar'
+    = yield

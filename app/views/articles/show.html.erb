@@ -1,18 +1,17 @@
-<p>
-  <strong>Title:</strong>
+<div class='title-show'>
   <%= @article.title %>
-</p>
+</div>
 
-<p>
-  <strong>Text:</strong>
+<div class=text-show>
   <%= @article.text %>
-</p>
+</div>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
 
-<h2>Add a comment:</h2>
+<h4>Додати коментар:</h4>
 <%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<h5><%= @article.comments.count %> коментарів </h5>
+<div class='comments'>
+  <%= render @comments.where.not(id: nil) %>
+  <%= will_paginate @comments %>
+</div>
