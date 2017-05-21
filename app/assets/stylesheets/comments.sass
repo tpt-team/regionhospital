@@ -1,0 +1,58 @@
+.new_comment
+  textarea#comment_body
+    width: 100%
+    border-radius: 7px
+    padding: 5px
+    resize: vertical
+
+  input
+    position: relative
+    left: 76%
+    background: #2c3e50
+    color: white
+    border-radius: 5px
+
+.comments
+  .comment
+    display: block
+    width: 100%
+    background: white
+    border-bottom: 1px solid grey
+    border-radius: 10px
+    position: relative
+    margin-bottom: 10px
+
+  .delete-btn
+    position: absolute
+    z-index: 10
+    right: 10px
+    top: 0
+
+    a
+      cursor: pointer
+      color: red
+      font-size: 17px
+      &:hover
+        font-size: 19px
+
+  .comment-body
+    word-wrap: break-word
+    padding: 15px
+    border-bottom-left-radius: 5px
+    background: rgba(128, 128, 128, 0.04)
+    border-bottom-right-radius: 5px
+
+  .comment-date
+    position: absolute
+    right: 35px
+    top: 3px
+    font-size: 12px
+
+  .comment-author
+    color: grey
+    font-style: italic
+    font-weight: 600
+    font-size: 12px
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    padding: 0 10px

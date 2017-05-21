@@ -1,0 +1,22 @@
+<div class=comment>
+
+  <div class=comment-author >
+    <%= comment.user.email %>
+  </div>
+
+  <div class=comment-date>
+    <%= comment.created_at %>
+  </div>
+
+  <div class=comment-body>
+    <%= comment.body %>
+  </div>
+
+  <div class='delete-btn'>
+    <% if comment.user == current_user %>
+      <%= link_to '×', [comment.article, comment],
+                   method: :delete,
+                   data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
+</div>

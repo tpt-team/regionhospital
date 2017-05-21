@@ -10,10 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170413102257) do
+ActiveRecord::Schema.define(version: 20170521195457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "photo"
+    t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "user_id"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_comments_on_article_id", using: :btree
+    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  end
+
+  create_table "medical_cards", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_medical_cards_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -29,8 +57,18 @@ ActiveRecord::Schema.define(version: 20170413102257) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.boolean  "doctor"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.date     "birthday"
+    t.string   "phone"
+    t.string   "sex"
+    t.string   "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "articles", "users"
+  add_foreign_key "comments", "articles"
+  add_foreign_key "comments", "users"
+  add_foreign_key "medical_cards", "users"
 end

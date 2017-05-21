@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :vascular_surgery, only: :index, as: :vascular
   resources :traumatological_department, only: :index, as: :traumatological
 
+  resources :articles, path: 'blog' do
+    resources :comments
+  end
+
   root 'welcome#index'
 
   devise_for :users, :controllers => {registrations: :registrations}

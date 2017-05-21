@@ -5,10 +5,12 @@
     <div class="formLists">
       <div class="member-list-newAccount">
         <div class="form-title">
-          <h1>New Account</h1>
+          <h1>Новий акаунт</h1>
         </div>
         <form id="registerForm" class="newAccount" layout="column" ng-submit="onSubmit()">
-
+          <%= image_tag(@user.avatar_url) if @user.avatar? %>
+          <%= f.file_field :avatar %>
+          <%= f.hidden_field :avatar_cache %>
           <%= f.email_field :email, placeholder: 'Email' %>
           <%= f.password_field :password, autocomplete: "off", placeholder: 'Password'%>
           <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Confirmation password' %>

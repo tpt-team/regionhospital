@@ -1,0 +1,17 @@
+<div class='title-show'>
+  <%= @article.title %>
+</div>
+
+<div class=text-show>
+  <%= @article.text %>
+</div>
+
+
+<h4>Додати коментар:</h4>
+<%= render 'comments/form' %>
+
+<h5><%= @article.comments.count %> коментарів </h5>
+<div class='comments'>
+  <%= render @comments.where.not(id: nil) %>
+  <%= will_paginate @comments %>
+</div>
