@@ -1,13 +1,13 @@
 class ArticlesController < ApplicationController
   before_action :require_user, except: [:show, :index]
+  before_action :article, except: %i(index new create)
   # http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
   def index
     @articles = Article.all.paginate(page: params[:page], per_page: 10)
   end
 
   def show
-    @article = Article.find(params[:id])
-    @comments = @article.comments.paginate(page: params[:page], per_page: 10)
+    @comments = article.comments
   end
 
   def new
@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
+    article
   end
 
   def create
@@ -28,25 +28,26 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
-    @article.update(article_params) if @article.user == current_user
-    if @article.update(article_params)
-      redirect_to @article
+    article.update(article_params) if article.user == current_user
+    if article.update(article_params)
+      redirect_to article
     else
       render 'edit'
     end
   end
 
   def destroy
-    @article = Article.find(params[:id])
-    @article.destroy if @article.user == current_user
-
-    redirect_to articles_path
+    article.destroy if @article.user == current_user
   end
 
   private
 
+  def article
+    @article ||= Article.find(params[:id])
+  end
+
   def article_params
-    params.require(:article).permit(:title, :text).merge(user_id: current_user.id)
+    params.require(:article).permit(:title, :text)
+          .merge(user_id: current_user.id)
   end
 end

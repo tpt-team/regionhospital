@@ -3,15 +3,14 @@
 </div>
 
 <div class=text-show>
-  <%= @article.text %>
+  <%= auto_link( simple_format(@article.text)) %>
 </div>
 
+<h5 id="article_comments_count_<%= @article.id %>"><%= @article.comments.count %> коментарів </h5>
+<div class='comments' id="comments_list_article_<%= @article.id %>">
+  <%= render partial: 'comments/comment', collection: @comments %>
+</div>
 
 <h4>Додати коментар:</h4>
 <%= render 'comments/form' %>
-
-<h5><%= @article.comments.count %> коментарів </h5>
-<div class='comments'>
-  <%= render @comments.where.not(id: nil) %>
-  <%= will_paginate @comments %>
-</div>
+<span class='comment-error' id="error_<%= @article.id %>">
