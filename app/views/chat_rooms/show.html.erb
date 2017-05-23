@@ -1,12 +1,26 @@
-<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-  <%= render @chat_room.messages %>
-</div>
-<%= form_for @message, url: '#' do |f| %>
-  <div class="form-group">
-    <%= f.label :body %>
-    <%= f.text_area :body, class: 'form-control' %>
-    <small class="text-muted">From 2 to 1000 characters</small>
+<div class="col-md-12">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      Чат
+    </div>
+    <div class="panel-body">
+      <ul class="media-list">
+        <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+          <%= render @chat_room.messages %>
+        </div>
+      </ul>
+    </div>
+    <div class="panel-footer">
+      <div class="input-group" style='display: block;'>
+        <%= form_for @message, url: '#' do |f| %>
+          <%= f.text_area :body, class: 'form-control' %>
+          <small class="text-muted">From 2 to 1000 characters</small>
+          <span class="input-group-btn">
+            <%= f.submit "SEND", class: 'btn btn-info' %>
+          </span>
+        <% end %>
+      </div>
+    </div>
   </div>
+</div>
 
-  <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
-<% end %>
