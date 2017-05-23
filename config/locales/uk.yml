@@ -1,0 +1,55 @@
+uk:
+  cards:
+    has_no_card: Щоб користуватися системою вам потрібно заповнити картку.
+    male: Чоловіча
+    female: Жіноча
+    new_card: Медична картка хворого
+    card_number: Медична картка хворого № %{id}
+    created_card: Картка створена успішно!
+    preferential_numbers:
+      0: Інваліди війни
+      1: Учасники війни
+      2: Учасники бойових дій
+      3: Інваліди
+      4: Учасники ліквідації наслідків аварії на ЧАЕС
+      5: Евакуйовані
+      6: Особи, які проживають на тереторії зони радіоекологічного контролю
+      7: Діти, які народилися від батьків, які віднесені до 1, 2, 3 категорій осіб
+    prompts:
+      name: Прізвище, ім'я, по батькові
+      home_phone: Домашній телефон
+      work_phone: Робочий телефон
+      dispancery:
+        dispancery_false: Диспансерна група відсутня
+        dispancery_true: Диспансерна група присутня
+      gender:
+        gender_0: Чоловіча стать
+        gender_1: Жіноча стать
+      contingent: Контингент
+  devise:
+    sessions:
+      user:
+        signed_in: Ви успішно увійшли в систему.
+        signed_out: Ви успішно вийшли з системи.
+
+  simple_form:
+    placeholders:
+      card:
+        first_name: Ім'я
+        surname: По батькові
+        last_name: Прізвище
+        home_phone: Телефон домашній
+        work_phone: Телефон робочий
+        preferential_number: Номер пільгового посвідчення
+        preferential_categories: Інші пільгові категорії
+        location: Місце проживання
+        job_info: Місце роботи, посада
+    prompts:
+      card:
+        gender: Стать
+        contingent: Контингент
+    labels:
+      card:
+        dispancery: Диспансерна група
+    submit:
+      cards: Створити картку

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :allergy_department, only: :index, as: :allergy
   resources :vascular_surgery, only: :index, as: :vascular
   resources :traumatological_department, only: :index, as: :traumatological
+  resources :cards
 
   resources :chat_rooms, only: [:new, :create, :show, :index]
   mount ActionCable.server => '/cable'

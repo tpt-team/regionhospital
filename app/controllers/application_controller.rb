@@ -8,4 +8,12 @@ class ApplicationController < ActionController::Base
   def require_user
     redirect_to root_path, notice: 'Щоб зробити цю дію потрібно авторизуватися' unless current_user
   end
+
+  def check_card
+    redirect_to new_card_path, notice: t('cards.has_no_card') if card_needed?
+  end
+
+  def card_needed?
+    current_user && !current_user.card? && !current_user.doctor?
+  end
 end
