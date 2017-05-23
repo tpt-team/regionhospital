@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :vascular_surgery, only: :index, as: :vascular
   resources :traumatological_department, only: :index, as: :traumatological
 
+  resources :chat_rooms, only: [:new, :create, :show, :index]
+  mount ActionCable.server => '/cable'
+
   resources :articles, path: 'blog' do
     resources :comments
   end
