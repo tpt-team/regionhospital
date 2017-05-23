@@ -5,8 +5,7 @@
         <img class="media-object img-circle " src="http://inforu.news/wp-content/uploads/upfw/logo-telegram.png" />
       </a>
       <div class="media-body" >
-        <%= message.body %>
-        <br />
+        <%= auto_link( simple_format(message.body)) %>
         <small class="text-muted"><%= message.user.name_for_chat %> | <%= message.timestamp %></small>
         <hr />
       </div>

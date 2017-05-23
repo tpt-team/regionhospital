@@ -1,4 +1,4 @@
-<div class=comment>
+<div class=comment id="comment_<%= comment.id %>">
 
   <div class=comment-author >
     <%= comment.user.email %>
@@ -9,14 +9,14 @@
   </div>
 
   <div class=comment-body>
-    <%= comment.body %>
+    <%= auto_link( simple_format(comment.body)) %>
   </div>
 
   <div class='delete-btn'>
     <% if comment.user == current_user %>
       <%= link_to '×', [comment.article, comment],
                    method: :delete,
-                   data: { confirm: 'Are you sure?' } %>
+                   data: { confirm: 'Are you sure?', remote: true } %>
     <% end %>
   </div>
 </div>

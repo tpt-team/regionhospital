@@ -1,0 +1,6 @@
+- if @comment.errors.present?
+  | $("#error_#{@article.id}").text("#{@comment.errors.full_messages.to_sentence.html_safe}")
+- else
+  | $("#comments_list_article_#{@article.id}").append("#{j(render partial: 'comments/comment', locals: { comment: @comment })}");
+  | $('#new_comment')[0].reset();
+  | $("#error_#{@article.id}").text("")
