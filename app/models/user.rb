@@ -9,10 +9,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :email, uniqueness: true
   mount_uploader :avatar, AvatarUploader
 
 
-  def name
+  def name_for_chat
     email.split('@')[0]
   end
 end
