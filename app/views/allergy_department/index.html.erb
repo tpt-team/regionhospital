@@ -1,161 +1,166 @@
 <div class='container'>
   <div class='main'>
-    <h4 class='main-text'> На базі обласної лікарні функціонує обласний алергологічний центр, до складу якого входять: відділення алергології на 40 ліжок, із них 35 - алергологічних, 5 - імунологічних та два спеціалізованих кабінети поліклінічного відділення: алергологічний і маніпуляційний для проведення алергологічного обстеження та специфічної імунотерапії.</h4>
-    <h4 class='main-text'> До обласного центру направляються хворі з вперше виявленим обструктивним синдромом, бронхіальною астмою (атопічна, аспіринова, астма фізичного зусилля), полінозами, алергіями (інсектною, медикаментозною, харчовою та холодовою), алергічними ринітами та кон’юнктивітами, кропив’янкою різної етіології, атопічними дерматитами, імунодефіцитними порушеннями. </h4>
-    <h4 class='main-text'> Обстеження та лікування хворих проводиться згідно протоколів надання медичної допомоги дорослому населенню. З діагностичною метою, окрім загальноклінічних, біохімічних, бактеріологічних, вірусологічних, імунологічних методів обстеження, застосовуються алергологічні тести, діапазон яких досить широкий. А саме:
+    <h4 class='main-text'> <%=t('.first_title')%> </h4>
+    <h4 class='main-text'> <%=t('.second_title')%> </h4>
+    <h4 class='main-text'> <%=t('.third_title')%>
       </br>
-      <p> - Prik-шкірні тести з пилковими, побутовими, епідермальними, інсектними алергенами;
-      <p> - провокаційні тести;
-      <p> - тести при фізичній кропив’янці;
-      <p> - визначення IqA, IqG, IqM та клінічного імунітету;
-      <p> - визначення секреторного ІqА та загального ІqЕ;
-      <p> - РОК з  харчовими алергенами;
-      <p> - ІФА IqG + G до гліадину;
-      <p> - визначення кріоглобуліну крові;
-      <p> - імунологічна діагностика паразитарної інфекції.
+      <p> <%=t('.a')%>
+      <p> <%=t('.b')%>
+      <p> <%=t('.c')%>
+      <p> <%=t('.d')%>
+      <p> <%=t('.e')%>
+      <p> <%=t('.f')%>
+      <p> <%=t('.g')%>
+      <p> <%=t('.h')%>
+      <p> <%=t('.i')%>
     <h4>
   </div>
   <div class="style-label">
-    <span class="directions">Лікування алергічних захворювань включає чотири основних напрямки :</span>
+    <span class="directions"><%=t('.directions')%></span>
     <ul class="box-shadow effect2">
       <li class="col-md-3">
         <span class="glyphicon glyphicon-eye-open flt" aria-hidden="true"></span>
         <div class="label-text">
-          <h3>Освіта та співпраця з хворими</h3>
+          <h3><%=t('.first_label')%></h3>
         </div>
       </li>
       <li class="col-md-3">
         <span class="glyphicon glyphicon-eye-open flt" aria-hidden="true"></span>
         <div class="label-text">
-          <h3>Елімінаційна терапія</h3>
+          <h3><%=t('.second_label')%></h3>
         </div>
       </li>
       <li class="col-md-3">
         <span class="glyphicon glyphicon-eye-open flt" aria-hidden="true"></span>
         <div class="label-text">
-          <h3>Алергоспецифічна імунотерапія (АСІТ)</h3>
+          <h3><%=t('.third_label')%></h3>
         </div>
       </li>
       <li class="col-md-3">
         <span class="glyphicon glyphicon-eye-open flt" aria-hidden="true"></span>
         <div class="label-text">
-          <h3>Фармакотерапія</h3>
+          <h3><%=t('.fourth_label')%></h3>
         </div>
       </li>
-      <div class="clearfix"></div>
     </ul>
   </div>
   <div class="service_features">
     <div class="col-md-4 ser-fet">
-      <h3>Показники роботи</h3>
+      <h3><%=t('.service_features')%></h3>
     </div>
     <tr>
       <td>
-        <table border="2" width="100%">
-          <tr>
-            <td><font color="#336699" size="3"><b>№ п/п</b></font></td>
-            <td><font color="#336699" size="3"><b>Показники</b></font></td>
-            <td><font color="#336699" size="3"><b>2013 рік</b></font></td>
-            <td><font color="#336699" size="3"><b>2014 рік</b></font></td>
-            <td><font color="#336699" size="3"><b>2015 рік</b></font></td>
+        <table border="2">
+          <tr class='title'>
+            <td>№</td>
+            <td><%=t('.indexes')%></td>
+            <td><%=t('.2013_year')%></td>
+            <td><%=t('.2014_year')%></td>
+            <td><%=t('.2015_year')%></td>
+            <td><%=t('.2016_year')%></td>
           </tr>
-          <tr>
-            <td><font size="2">1</font></td>
-            <td><font size="2">Планові ліжка</font></td>
-            <td><font size="2">40</font></td>
-            <td><font size="2">40</font></td>
-            <td><font size="2">40</font></td>
+          <tr class='body'>
+            <td>1</td>
+            <td><%=t('.planned_bed')%></td>
+            <td>40</td>
+            <td>40</td>
+            <td>40</td>
+            <td>40</td>
           </tr>
-          <tr>
-            <td><font size="2">2</font></td>
-            <td><font size="2">Проліковано хворих</font></td>
-            <td><font size="2">1275</font></td>
-            <td><font size="2">1285</font></td>
-            <td><font size="2">1284</font></td>
+          <tr class='body'>
+            <td>2</td>
+            <td><%=t('.patients')%></td>
+            <td>1275</td>
+            <td>1285</td>
+            <td>1284</td>
+            <td>1275</td>
           </tr>
-          <tr>
-            <td><font size="2">3</font></td>
-            <td><font size="2">Робота ліжка</font></td>
-            <td><font size="2">349</font></td>
-            <td><font size="2">363</font></td>
-            <td><font size="2">363,3</font></td>
+          <tr class='body'>
+            <td>3</td>
+            <td><%=t('.work_bed')%></td>
+            <td>349</td>
+            <td>363</td>
+            <td>363,3</td>
+            <td>352,1</td>
           </tr>
-          <tr>
-            <td><font size="2">4</font></td>
-            <td><font size="2">Середнє перебування на ліжку</font></td>
-            <td><font size="2">10,9</font></td>
-            <td><font size="2">11,3</font></td>
-            <td><font size="2">11,3</font></td>
+          <tr class='body'>
+            <td>4</td>
+            <td><%=t('.average_stay_in_bed')%></td>
+            <td>10,9</td>
+            <td>11,3</td>
+            <td>11,3</td>
+            <td>11,0</td>
           </tr>
-          <tr>
-            <td><font size="2">5</font></td>
-            <td><font size="2">Обіг ліжка</font></td>
-            <td><font size="2">31,9</font></td>
-            <td><font size="2">32,2</font></td>
-            <td><font size="2">32,2</font></td>
+          <tr class='body'>
+            <td>5</td>
+            <td><%=t('.bed_count')%></td>
+            <td>31,9</td>
+            <td>32,2</td>
+            <td>32,2</td>
+            <td>32,0</td>
           </tr>
         </table>
       </td>
     </tr>
   </div>
   <div class="doctor-port">
-    <h3>Наші лікарі</h3>
+    <h3><%=t('.our_doctors')%></h3>
   </div>
   <div class='doctor-list'>
     <ul>
       <li>
         <%= image_tag("a2.jpg", alt: "name", class: "doctor-pic") %>
         <div class="caption">
-          <h4>Гармаш Наталія Степанівна</h4>
-          <span>- завідувач відділення,</span>
-          <span>головний позаштатний алерголог ГУОЗ та МК ОДА  </span>
-          <span>1988р. – закінчила Івано-Франківський медичний інститут</span>
-          <span>категорія – Вища</span>
+          <h4><%=t('.1_doctor_name')%></h4>
+          <span><%=t('.1_doctor_position')%></span>
+          <span><%=t('.1_doctor_position_2')%></span>
+          <span><%=t('.1_doctor_education')%></span>
+          <span><%=t('.doctor_category')%></span>
         </div>
       </li>
       <li>
         <%= image_tag("a3.jpg", alt: "name", class: "doctor-pic") %>
         <div class="caption">
-          <h4>Щербата Катерина Миколаївна</h4>
-          <span>лікар-алерголог </span>
-          <span>1967р. – закінчила Вінницький медичний інститут</span>
-          <span>категорія – Вища</span>
+          <h4><%=t('.2_doctor_name')%></h4>
+          <span><%=t('.doctor_position')%></span>
+          <span><%=t('.2_doctor_education')%></span>
+          <span><%=t('.doctor_category')%></span>
         </div>
       </li>
       <li>
         <%= image_tag("a4.jpg", alt: "name", class: "doctor-pic") %>
         <div class="caption">
-          <h4>Кисельова Олена Миколаївна</h4>
-          <span>лікар-алерголог</span>
-          <span>1985р. – закінчила Полтавський медичний інститут</span>
-          <span>категорія – Вища</span>
+          <h4><%=t('.3_doctor_name')%></h4>
+          <span><%=t('.doctor_position')%></span>
+          <span><%=t('.3_doctor_education')%></span>
+          <span><%=t('.doctor_category')%></span>
         </div>
       </li>
       <li>
         <%= image_tag("a1.jpg", alt: "name", class: "doctor-pic") %>
         <div class="caption">
-          <h4>Стратійчук Лариса Янківна</h4>
-          <span>лікар-алерголог</span>
-          <span>1989р. – закінчила Вінницький медичний інститут</span>
-          <span>категорія – Вища</span>
+          <h4><%=t('.4_doctor_name')%></h4>
+          <span><%=t('.doctor_position')%></span>
+          <span><%=t('.4_doctor_education')%></span>
+          <span><%=t('.doctor_category')%></span>
         </div>
       </li>
       <li>
         <%= image_tag("a5.jpg", alt: "name", class: "doctor-pic") %>
         <div class="caption">
-          <h4>Кондрацька Євгенія Іванівна</h4>
-          <span>лікар-алерголог</span>
-          <span>1967р. – закінчила Тернопільський медичний інститут</span>
-          <span>категорія – Перша</span>
+          <h4><%=t('.5_doctor_name')%></h4>
+          <span><%=t('.doctor_position')%></span>
+          <span><%=t('.5_doctor_education')%></span>
+          <span><%=t('.5_doctor_category')%></span>
         </div>
       </li>
       <li>
         <%= image_tag("a6.jpg", alt: "name", class: "doctor-pic") %>
         <div class="caption ">
-          <h4>Кандул Тетяна Борисівна</h4>
-          <span>лікар-алерголог</span>
-          <span>2002р. – закінчила Полтавську медичну стоматологічну академію</span>
-          <span>категорія - Вища</span>
+          <h4><%=t('.6_doctor_name')%></h4>
+          <span><%=t('.doctor_position')%></span>
+          <span><%=t('.6_doctor_education')%></span>
+          <span><%=t('.doctor_category')%></span>
         </div>
       </li>
     </ul>
@@ -165,21 +170,21 @@
 <div class="contact-form">
   <div class='container'>
     <div class="col-md-4 pd adress">
-      <h3>Адреса</h3>
+      <h3><%=t('.address')%></h3>
       <ul>
-        <li>Черкаси</li>
-        <li>Україна</li>
-        <li>вул.Менделєєва, 3</li>
+        <li><%=t('.city')%></li>
+        <li><%=t('.country')%></li>
+        <li><%=t('.street')%></li>
       </ul>
       </div>
       <div class="col-md-8 pd contact-us">
-        <h3>Зв'яжіться з нами</h3>
+        <h3><%=t('.contact_us')%></h3>
         <form>
-          <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Введіть текст тут ...</textarea>
+          <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}"><%= t('.write_text_here')%></textarea>
           <br>
-          <input class="name" type="text" name="name" value="Ваше ім'я" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-          <input class="nuber" type="text" name="Phone number" value="Номер телефону" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Number';}">
-          <button type="button" class="btn btn-info sub1">Відправити</button>
+          <input class="name" type="text" name="name" value=<%= t('.your_name')%> onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+          <input class="nuber" type="text" name="Phone number" value=<%= t('.number')%> onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Number';}">
+          <button type="button" class="btn btn-info sub1"><%= t('.send')%></button>
         </form>
       </div>
       <div class="clearfix"></div>
@@ -189,7 +194,7 @@
 <div class='allergy'>
   <div class="footer">
     <div class="footer-text">
-      <h3>Обласне алергологічне відділення</h3>
+      <h3><%= t('.allergy')%></h3>
     </div>
   </div>
 </div>

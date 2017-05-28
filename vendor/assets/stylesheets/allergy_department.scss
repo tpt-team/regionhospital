@@ -1,4 +1,17 @@
 .allergy {
+  table {
+    width: 100%;
+  }
+  tr.title td {
+    font-size: 600;
+    color: rgb(51, 102, 153);
+    font-size: medium;
+  }
+
+  tr.body td {
+    font-size: small;
+  }
+
   .navbar {
     span {
       display: block;
