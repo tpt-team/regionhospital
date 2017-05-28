@@ -6,12 +6,12 @@ class Article < ApplicationRecord
   validates :title, presence: true,
                     length: { minimum: 5 }
 
-  before_create :save_photo
+  before_create :set_photo
 
   private
 
-  def save_photo
+  def set_photo
     self.photo = GoogleCustomSearchApi
-                 .search('Medical', searchType: 'image').items.sample.link
+                 .search(title, searchType: 'image').items.sample.link
   end
 end
