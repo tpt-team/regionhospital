@@ -8,10 +8,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="/" class="scroll">
+              <%= link_to root_path do%>
                 <span class="glyphicon glyphicon-home icn_pos hm" aria-hidden="true"></span>
                 <%= t('.root')%>
-              </a>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to advice_allergy_index_path do%>
+                <span class="glyphicon glyphicon-info-sign icn_pos hm" aria-hidden="true"></span>
+                <%= t('.advice')%>
+              <% end %>
             </li>
           </ul>
         </div>
