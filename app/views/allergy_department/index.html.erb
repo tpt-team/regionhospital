@@ -1,1 +1,204 @@
-<h1>Влад</h1>
+<div class='container'>
+  <div class='main'>
+    <h4 class='main-text'> <%=t('.first_title')%> </h4>
+    <h4 class='main-text'> <%=t('.second_title')%> </h4>
+    <h4 class='main-text'> <%=t('.third_title')%>
+      </br>
+      <p> <%=t('.a')%>
+      <p> <%=t('.b')%>
+      <p> <%=t('.c')%>
+      <p> <%=t('.d')%>
+      <p> <%=t('.e')%>
+      <p> <%=t('.f')%>
+      <p> <%=t('.g')%>
+      <p> <%=t('.h')%>
+      <p> <%=t('.i')%>
+    <h4>
+  </div>
+  <div class="style-label">
+    <span class="directions"><%=t('.directions')%></span>
+    <ul class="box-shadow effect2">
+      <li class="col-md-3">
+        <span class="glyphicon glyphicon-eye-open flt" aria-hidden="true"></span>
+        <div class="label-text">
+          <h3><%=t('.first_label')%></h3>
+        </div>
+      </li>
+      <li class="col-md-3">
+        <span class="glyphicon glyphicon-eye-open flt" aria-hidden="true"></span>
+        <div class="label-text">
+          <h3><%=t('.second_label')%></h3>
+        </div>
+      </li>
+      <li class="col-md-3">
+        <span class="glyphicon glyphicon-eye-open flt" aria-hidden="true"></span>
+        <div class="label-text">
+          <h3><%=t('.third_label')%></h3>
+        </div>
+      </li>
+      <li class="col-md-3">
+        <span class="glyphicon glyphicon-eye-open flt" aria-hidden="true"></span>
+        <div class="label-text">
+          <h3><%=t('.fourth_label')%></h3>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="service_features">
+    <div class="col-md-4 ser-fet">
+      <h3><%=t('.service_features')%></h3>
+    </div>
+    <tr>
+      <td>
+        <table border="2">
+          <tr class='title'>
+            <td>№</td>
+            <td><%=t('.indexes')%></td>
+            <td><%=t('.2013_year')%></td>
+            <td><%=t('.2014_year')%></td>
+            <td><%=t('.2015_year')%></td>
+            <td><%=t('.2016_year')%></td>
+          </tr>
+          <tr class='body'>
+            <td>1</td>
+            <td><%=t('.planned_bed')%></td>
+            <td>40</td>
+            <td>40</td>
+            <td>40</td>
+            <td>40</td>
+          </tr>
+          <tr class='body'>
+            <td>2</td>
+            <td><%=t('.patients')%></td>
+            <td>1275</td>
+            <td>1285</td>
+            <td>1284</td>
+            <td>1275</td>
+          </tr>
+          <tr class='body'>
+            <td>3</td>
+            <td><%=t('.work_bed')%></td>
+            <td>349</td>
+            <td>363</td>
+            <td>363,3</td>
+            <td>352,1</td>
+          </tr>
+          <tr class='body'>
+            <td>4</td>
+            <td><%=t('.average_stay_in_bed')%></td>
+            <td>10,9</td>
+            <td>11,3</td>
+            <td>11,3</td>
+            <td>11,0</td>
+          </tr>
+          <tr class='body'>
+            <td>5</td>
+            <td><%=t('.bed_count')%></td>
+            <td>31,9</td>
+            <td>32,2</td>
+            <td>32,2</td>
+            <td>32,0</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </div>
+  <div class="doctor-port">
+    <h3><%=t('.our_doctors')%></h3>
+  </div>
+  <div class='doctor-list'>
+    <ul>
+      <li>
+        <%= image_tag("a2.jpg", alt: "name", class: "doctor-pic") %>
+        <div class="caption">
+          <h4><%=t('.1_doctor_name')%></h4>
+          <span><%=t('.1_doctor_position')%></span>
+          <span><%=t('.1_doctor_position_2')%></span>
+          <span><%=t('.1_doctor_education')%></span>
+          <span><%=t('.doctor_category')%></span>
+        </div>
+      </li>
+      <li>
+        <%= image_tag("a3.jpg", alt: "name", class: "doctor-pic") %>
+        <div class="caption">
+          <h4><%=t('.2_doctor_name')%></h4>
+          <span><%=t('.doctor_position')%></span>
+          <span><%=t('.2_doctor_education')%></span>
+          <span><%=t('.doctor_category')%></span>
+        </div>
+      </li>
+      <li>
+        <%= image_tag("a4.jpg", alt: "name", class: "doctor-pic") %>
+        <div class="caption">
+          <h4><%=t('.3_doctor_name')%></h4>
+          <span><%=t('.doctor_position')%></span>
+          <span><%=t('.3_doctor_education')%></span>
+          <span><%=t('.doctor_category')%></span>
+        </div>
+      </li>
+      <li>
+        <%= image_tag("a1.jpg", alt: "name", class: "doctor-pic") %>
+        <div class="caption">
+          <h4><%=t('.4_doctor_name')%></h4>
+          <span><%=t('.doctor_position')%></span>
+          <span><%=t('.4_doctor_education')%></span>
+          <span><%=t('.doctor_category')%></span>
+        </div>
+      </li>
+      <li>
+        <%= image_tag("a5.jpg", alt: "name", class: "doctor-pic") %>
+        <div class="caption">
+          <h4><%=t('.5_doctor_name')%></h4>
+          <span><%=t('.doctor_position')%></span>
+          <span><%=t('.5_doctor_education')%></span>
+          <span><%=t('.5_doctor_category')%></span>
+        </div>
+      </li>
+      <li>
+        <%= image_tag("a6.jpg", alt: "name", class: "doctor-pic") %>
+        <div class="caption ">
+          <h4><%=t('.6_doctor_name')%></h4>
+          <span><%=t('.doctor_position')%></span>
+          <span><%=t('.6_doctor_education')%></span>
+          <span><%=t('.doctor_category')%></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="contact-form">
+  <div class='container'>
+    <div class="col-md-4 pd adress">
+      <h3><%=t('.address')%></h3>
+      <ul>
+        <li><%=t('.city')%></li>
+        <li><%=t('.country')%></li>
+        <li><%=t('.street')%></li>
+        <li><%=t('.phone_department')%></li>
+        <li><%=t('.phone_department_head')%></li>
+        <li><%=t('.department_number')%></li>
+
+      </ul>
+      </div>
+      <div class="col-md-8 pd contact-us">
+        <h3><%=t('.contact_us')%></h3>
+        <form>
+          <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}"><%= t('.write_text_here')%></textarea>
+          <br>
+          <input class="name" type="text" name="name" value=<%= t('.your_name')%> onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+          <input class="nuber" type="text" name="Phone number" value=<%= t('.number')%> onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Number';}">
+          <button type="button" class="btn btn-info sub1"><%= t('.send')%></button>
+        </form>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<div class='allergy'>
+  <div class="footer">
+    <div class="footer-text">
+      <h3><%= t('.allergy')%></h3>
+    </div>
+  </div>
+</div>
