@@ -109,6 +109,9 @@ ua:
       city: Черкаси
       country: Україна
       street: вул.Менделєєва, 3
+      phone_department: "Телефон відділення: (0-472) 45-86-77"
+      phone_department_head: "Телефон завідувача відділення:"
+      department_number: "(0-472) 45-40-87, (0-472) 45-28-12"
       contact_us: Зв'яжіться з нами
       write_text_here: 'Введіть текст тут ...'
       your_name: Ваше ім'я
