@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    redirect_to root_path, notice: 'Щоб зробити цю дію потрібно авторизуватися' unless current_user
+    redirect_to root_path, notice: t('sign_in.has_to_sign_in') unless current_user
   end
 
   def check_card
