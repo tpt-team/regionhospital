@@ -5,6 +5,8 @@
 /log/*
 /tmp/*
 /test/*
+/config/database.yml
+/public/uploads/*
 
 # Ignore Byebug command history file.
 .byebug_history
