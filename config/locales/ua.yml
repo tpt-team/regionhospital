@@ -54,6 +54,8 @@ ua:
     submit:
       cards: Створити картку
 
+  sign_in:
+    has_to_sign_in: Щоб зробити цю дію потрібно авторизуватися
   # Allergy department
 
   allergy_department:
