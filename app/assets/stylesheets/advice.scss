@@ -21,20 +21,16 @@
   }
 
   .background {
-    display: flex;
-    flex-direction: row;
     padding-top: 2%;
     padding-bottom: 2%;
     img {
-      width: 80px;
-      height: 110px;
-      margin-right: 90px;
-      margin-left: 60px;
+      width: 16%;
+      height: 100px;
     }
     .pic-4 {
+      width: 100%;
       img {
-        margin-right: 120px;
-        margin-left: 133px;
+        width: 24%;
       }
     }
   }
