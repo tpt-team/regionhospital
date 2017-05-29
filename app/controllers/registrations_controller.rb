@@ -5,7 +5,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     User.create(user_params)
-    redirect_to root_path
+    redirect_to root_path, notice: t('.signed_up')
   end
 
   def update

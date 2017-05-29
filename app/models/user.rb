@@ -7,7 +7,8 @@ class User < ApplicationRecord
   has_one :card
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable,
+         :confirmable
 
   validates :email, uniqueness: true
   mount_uploader :avatar, AvatarUploader

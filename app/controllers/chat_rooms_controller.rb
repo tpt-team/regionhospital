@@ -1,5 +1,7 @@
 class ChatRoomsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :require_user
+  before_action :check_card
+
   def index
     @chat_rooms = ChatRoom.all
   end

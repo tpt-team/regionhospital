@@ -25,6 +25,7 @@ gem 'will_paginate'
 gem 'simple_form'
 
 group :development, :test do
+  gem 'letter_opener'
   gem 'byebug', platform: :mri
   gem 'pry'
 end
