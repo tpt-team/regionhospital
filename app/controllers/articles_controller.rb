@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
-  before_action :require_user, except: [:show, :index]
+  before_action :require_user
   before_action :article, except: %i(index new create)
+  before_action :check_card
+
   # http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
   def index
     @articles = Article.all.paginate(page: params[:page], per_page: 10)
