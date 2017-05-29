@@ -1,4 +1,12 @@
 ua:
+  navbar:
+    root: Головна
+    blog: Блог
+    chat: Чат
+    my_page: Моя сторінка
+    sign_in: Увійти
+    sign_up: Зареєструватися
+    sign_out: Вийти
   cards:
     has_no_card: Щоб користуватися системою вам потрібно заповнити картку.
     male: Чоловіча
@@ -27,10 +35,17 @@ ua:
         gender_1: Жіноча стать
       contingent: Контингент
   devise:
+    confirmations:
+      user:
+        confirmed: Ваш адрес успішно підтверджено!
     sessions:
       user:
         signed_in: Ви успішно увійшли в систему.
         signed_out: Ви успішно вийшли з системи.
+  registrations:
+    create:
+      signed_up: Щоб закінчити реєстрацію потрібно підтвердити Ваш email.
+
 
   simple_form:
     placeholders:
@@ -54,6 +69,8 @@ ua:
     submit:
       cards: Створити картку
 
+  sign_in:
+    has_to_sign_in: Щоб зробити цю дію потрібно авторизуватися
   # Allergy department
 
   allergy_department:
