@@ -39,9 +39,24 @@ ua:
       user:
         confirmed: Ваш адрес успішно підтверджено!
     sessions:
+      new:
+        email: Електронний адрес
+        password: Пароль
+        remember_me: Запам'ятати
+        sign_in: Увійти
+        exit: Вхід
       user:
         signed_in: Ви успішно увійшли в систему.
         signed_out: Ви успішно вийшли з системи.
+    registrations:
+      new:
+        new_acount: Новий акаунт
+        email: Електронний адрес
+        password: Пароль
+        confirmation_password: Повторити пароль
+        registration: Зареєструватися
+        doctor: Лікар?
+        upload: Фото
   registrations:
     create:
       signed_up: Щоб закінчити реєстрацію потрібно підтвердити Ваш email.
