@@ -25,10 +25,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'
 
 group :development, :test do
-  gem 'letter_opener'
   gem 'byebug', platform: :mri
   gem 'erd'
+  gem 'letter_opener'
   gem 'pry'
+  gem 'railroady'
 end
 
 group :development do
