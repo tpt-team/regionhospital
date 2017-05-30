@@ -1,20 +1,134 @@
-.welcome-section
-  margin: 50px
+.welcome
+  .fa
+    display: inline-block
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    line-height: 1
+    -webkit-font-smoothing: antialiased
 
-  a
-    text-decoration: none
-    display: inline-flex
-    justify-content: center
-    align-items: center
-    height: 200px
-    background: rgba(3, 169, 244, 0.28)
-    border-radius: 5px
-    box-shadow: 0 5px 5px #b2b2b2
-    width: 46%
-    margin-left: 3%
-    margin-top: 3%
-    transition: all .3s
+  .banner-container
+    img
+      width: 100%
+      position: relative
+      padding: 0px
 
-    &:hover
-      transform: translateY(5px)
-      box-shadow: none
+  .page-section
+    background: #005f8d
+    width: 100%
+    height: auto
+    padding: 35px 0
+
+    p
+      font-size: 1.1em
+      line-height: 1.6em
+
+    h2, h3, p
+      color: #fff
+
+    .heading
+      padding: 3px 10px
+      padding-bottom: 15px
+      margin-bottom: 30px
+      display: block
+
+    .c1
+      background: rgba(0, 161, 203, 0.64)
+      height: 310px
+      padding: 15px
+
+    .c2
+      background: rgba(0, 161, 203, 0.85)
+      height: 310px
+      padding: 15px
+
+    .c1:hover, .c2:hover
+      background: rgba(0, 43, 54, 0.89)
+      cursor: pointer
+
+    .circle
+      background: #fff
+      height: 90px
+      width: 90px
+      border-radius: 95px
+      color: #005f8d
+      line-height: 90px !important
+
+      &:hover
+        transform: rotate(360deg)
+        -webkit-transform: rotate(360deg)
+        -moz-transform: rotate(360deg)
+        -o-transform: rotate(360deg)
+        -ms-transform: rotateY(360deg)
+        transition: all 0.2s linear 0s
+        -webkit-transition: all 0.2s linear 0s
+        -moz-transition: all 0.2s linear 0s
+        -o-transition: all 0.2s linear 0s
+
+  .about-us
+    p
+      color: #858585
+      margin: 0 0 1em !important
+
+    h3
+      text-transform: uppercase
+      letter-spacing: 1px
+      color: #222
+
+    img
+      max-width: 100%
+      height: auto
+
+    .heading
+      padding: 3px 10px
+      padding-bottom: 15px
+      margin-bottom: 30px
+      display: block
+      h2
+        color: #222
+      p
+        font-size: 1.2em
+
+    .feature
+      margin-top: 30px
+      margin-bottom: 54px
+
+    .right
+      padding-left: 32px
+      float: right
+
+    .left
+      padding-right: 32px
+      float: left
+
+    .six
+      width: 50%
+
+  .contact-parlex
+    padding-top: 0px
+    background-image: url(banner-bg.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
+
+    .parlex-back
+      height: 70px
+      padding: 23px 20px
+      background-color: rgba(0, 95, 141, 0.84)
+      color: rgba(255, 255, 255, 0.64) !important
+
+      span.title
+        font-size: 18px
+        padding-left: 10px
+        color: rgba(255, 255, 255, 0.94)
+
+      .social
+        a
+          font-size: 20px
+          margin: 0 10px
+          color: #005f8d
+          background: rgba(255, 255, 255, 0.44)
+          padding: 5px 10px
+
+        &:hover
+          color: #000

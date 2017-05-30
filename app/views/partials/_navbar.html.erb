@@ -1,15 +1,17 @@
-<div class='navbar'>
-  <ul>
-    <li class="left"><%= link_to t('navbar.root'), root_path %></li>
-    <% if user_signed_in? %>
-      <li class='left'><%= link_to t('navbar.blog'), articles_path %></li>
-      <li class='left'><%= link_to t('navbar.chat'), chat_rooms_path %></li>
-      <span><%= current_user.email %></span>
-      <li><%= link_to t('navbar.sign_out'), destroy_user_session_path, :method => :delete %></li>
-      <li><%= link_to t('navbar.my_page'), user_root_path %></li>
-    <% else %>
-      <li><%= link_to t('navbar.sign_up'), new_user_registration_path %></li>
-      <li><%= link_to t('navbar.sign_in'), new_user_session_path %></li>
-    <% end %>
-  </ul>
+<div class='container'>
+  <div class='navbar'>
+    <ul>
+      <li class="left"><%= link_to t('navbar.root'), root_path %></li>
+      <% if user_signed_in? %>
+        <li class='left'><%= link_to t('navbar.blog'), articles_path %></li>
+        <li class='left'><%= link_to t('navbar.chat'), chat_rooms_path %></li>
+        <span><%= current_user.email %></span>
+        <li><%= link_to t('navbar.sign_out'), destroy_user_session_path, :method => :delete %></li>
+        <li><%= link_to t('navbar.my_page'), user_root_path %></li>
+      <% else %>
+        <li><%= link_to t('navbar.sign_up'), new_user_registration_path %></li>
+        <li><%= link_to t('navbar.sign_in'), new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

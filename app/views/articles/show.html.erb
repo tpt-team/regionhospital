@@ -1,16 +1,18 @@
-<div class='title-show'>
-  <%= auto_link( simple_format(@article.title)) %>
-</div>
+<div class='container'>
+  <div class='title-show'>
+    <%= auto_link( simple_format(@article.title)) %>
+  </div>
 
-<div class=text-show>
-  <%= auto_link( simple_format(@article.text)) %>
-</div>
+  <div class=text-show>
+    <%= auto_link( simple_format(@article.text)) %>
+  </div>
 
-<h5 id="article_comments_count_<%= @article.id %>"><%= @article.comments.count %> коментарів </h5>
-<div class='comments' id="comments_list_article_<%= @article.id %>">
-  <%= render partial: 'comments/comment', collection: @comments %>
-</div>
+  <h5 id="article_comments_count_<%= @article.id %>"><%= @article.comments.count %> коментарів </h5>
+  <div class='comments' id="comments_list_article_<%= @article.id %>">
+    <%= render partial: 'comments/comment', collection: @comments %>
+  </div>
 
-<h4>Додати коментар:</h4>
-<%= render 'comments/form' %>
-<span class='comment-error' id="error_<%= @article.id %>">
+  <h4>Додати коментар:</h4>
+  <%= render 'comments/form' %>
+  <span class='comment-error' id="error_<%= @article.id %>">
+</div>
