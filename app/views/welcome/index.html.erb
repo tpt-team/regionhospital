@@ -1,14 +1,79 @@
-<section class='welcome-section'>
-  <%= link_to traumatological_index_path do%>
-    <span> Oртопедо-травматологічне відділення </span>
-  <% end %>
-  <%= link_to vascular_index_path do%>
-    <span> Cудинна хірургія </span>
-  <% end %>
-  <%= link_to allergy_index_path do%>
-    <span> Алергологічне відділення </span>
-  <% end %>
-  <%= link_to hemodialysis_path do%>
-    <span> Відділення гемодіалізу </span>
-  <% end %>
-</section>
+<div class='welcome'>
+  <section class='banner-container'>
+    <%= image_tag "banner-bg.jpg" %>
+  </section>
+  <section class='page-section'>
+    <div class='container'>
+      <div class="heading text-center">
+        <h2><%=t('.our_departments')%></h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3 text-center c2">
+          <%= link_to allergy_index_path do%>
+            <i class="fa fa-stethoscope fa-2x circle"></i>
+            <h3><%=t('.allergy_department')%></h3>
+            <p><%=t('.allergy_department_info')%></p>
+          <% end %>
+        </div>
+        <div class="col-md-3 text-center c1">
+          <%= link_to hemodialysis_path do%>
+            <i class="fa fa-heartbeat fa-2x circle"></i>
+            <h3><%=t('.hemodialysis_department')%></h3>
+            <p><%=t('.hemodialysis_department_info')%></p>
+          <% end %>
+        </div>
+        <div class="col-md-3 text-center c2">
+          <%= link_to traumatological_index_path do%>
+            <i class="fa fa-plus-square fa-2x circle"></i>
+            <h3><%=t('.traumatological_department')%></h3>
+            <p><%=t('.traumatological_department_info')%></p>
+          <% end %>
+        </div>
+        <div class="col-md-3 text-center c1">
+          <%= link_to vascular_index_path do%>
+            <i class="fa fa-medkit fa-2x circle"></i>
+            <h3><%=t('.vascular_department')%></h3>
+            <p><%=t('.vascular_department_info')%></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class=about-us>
+    <div class="container">
+      <div class="heading text-center">
+        <h2><%=t('.general_data')%></h2>
+        <p><%=t('.general_data_info')%></p>
+      </div>
+      <div class="row feature design">
+        <div class="six columns right">
+          <h3><%=t('.regional_hospital')%></h3>
+          <p><%=t('.regional_hospital_info_1')%></p>
+          <p><%=t('.regional_hospital_info_2')%></p>
+          <p><%=t('.regional_hospital_info_3')%></p>
+        </div>
+        <div class="six columns feature-media left">
+          <%= image_tag 'feature-img-1.png' %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact-parlex">
+    <div class="parlex-back">
+      <div class="col-sm-6">
+        <span class='title'><%=t('.address')%></span>
+        <span><%=t('.address_info')%></span>
+        <span class='title'><%=t('.tel')%></span>
+        <span><%=t('.tel_info')%></span>
+      </div>
+      <div class="col-sm-6">
+        <div class="social text-right">
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+          <a href="#"><i class="fa fa-flickr"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+  </section>
+</div>

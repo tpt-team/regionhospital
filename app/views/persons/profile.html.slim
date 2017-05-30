@@ -1,4 +1,5 @@
-- if current_user.doctor?
-  = render 'doctor'
-- else
-  = render 'patient'
+.container
+  - if current_user.doctor?
+    = render 'doctor'
+  - else
+    = render 'patient'
