@@ -2,6 +2,10 @@ class CardsController < ApplicationController
   before_action :require_user, only: :create
   before_action :set_card, only: %w(new create)
 
+  def new
+    @card.records.build
+  end
+
   def create
     @card.assign_attributes(card_params)
     if @card.save
@@ -19,7 +23,9 @@ class CardsController < ApplicationController
 
   def card_params
     params.require(:card).permit(:first_name, :last_name, :surname, :home_phone,
-                                 :work_phone, :dispancery, :gender, :preferential_number,
-                                 :location, :job_info, :contingent, :preferential_categories)
+                                 :work_phone, :dispancery, :gender,
+                                 :preferential_number, :location, :job_info,
+                                 :contingent, :preferential_categories, :disease,
+                                 records_attributes: [:id, :body, :_destroy, :user_id, :card_id])
   end
 end

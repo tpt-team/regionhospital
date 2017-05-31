@@ -31,5 +31,14 @@
         = f.input :location, label: false
       .col.col-md-6
         = f.input :job_info, label: false
+    .row
+      .col.col-md-12
+        = f.input :disease, label: false
+    h1 Records
+    = f.simple_fields_for :records do |d|
+      = render 'record_fields', f: d
+    .links
+      = link_to_add_association 'add record', f, :records
+
     .row.card-form__submit-row
       = f.button :submit, t('simple_form.submit.cards'), class: 'card-form__submit'

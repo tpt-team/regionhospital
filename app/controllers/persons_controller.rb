@@ -3,5 +3,6 @@ class PersonsController < ApplicationController
 
   def profile
     @card = current_user.card
+    @records = current_user.records
   end
 end

@@ -46,3 +46,15 @@
       = @card.preferential_categories
       .card__prompt
         = t('simple_form.placeholders.card.preferential_categories')
+  hr
+  .row
+    .col.col-md-12
+      = @card.disease
+      .card__prompt
+        = t('simple_form.placeholders.card.disease')
+
+.records
+  hr
+    ol
+      - @records.each do |record|
+        li = record.body
