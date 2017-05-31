@@ -74,6 +74,7 @@ ua:
         preferential_categories: Інші пільгові категорії
         location: Місце проживання
         job_info: Місце роботи, посада
+        disease: Хвороби які забороняють Вам здавати кров
     prompts:
       card:
         gender: Стать

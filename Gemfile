@@ -24,6 +24,7 @@ gem 'slim-rails', '~> 3.1', '>= 3.1.1'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'
+gem 'cocoon'
 
 group :development, :test do
   gem 'letter_opener'

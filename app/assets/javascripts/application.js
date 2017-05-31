@@ -16,4 +16,5 @@
 //= require bootstrap-sprockets
 //= require bootstrap-notify
 //= require cable
+//= require cocoon
 //= require_tree .

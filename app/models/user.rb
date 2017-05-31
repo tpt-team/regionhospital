@@ -3,8 +3,9 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :articles, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :records, through: :card
 
-  has_one :card
+  has_one :card, dependent: :destroy
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
