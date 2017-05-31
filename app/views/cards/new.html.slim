@@ -34,11 +34,11 @@
     .row
       .col.col-md-12
         = f.input :disease, label: false
-    h1 Records
+    h1 =t('.records')
     = f.simple_fields_for :records do |d|
       = render 'record_fields', f: d
     .links
-      = link_to_add_association 'add record', f, :records
+      = link_to_add_association t('.add_record'), f, :records
 
     .row.card-form__submit-row
       = f.button :submit, t('simple_form.submit.cards'), class: 'card-form__submit'

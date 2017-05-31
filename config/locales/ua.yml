@@ -8,6 +8,11 @@ ua:
     sign_up: Зареєструватися
     sign_out: Вийти
   cards:
+    new:
+      add_record: Додати запис
+      records: Записи
+    record_fields:
+      remove_record: Видалити запис
     has_no_card: Щоб користуватися системою вам потрібно заповнити картку.
     male: Чоловіча
     female: Жіноча
@@ -31,6 +36,7 @@ ua:
         dispancery_false: Диспансерна група відсутня
         dispancery_true: Диспансерна група присутня
       gender:
+        gender_:  Стать відсутняі
         gender_0: Чоловіча стать
         gender_1: Жіноча стать
       contingent: Контингент
@@ -75,6 +81,9 @@ ua:
         location: Місце проживання
         job_info: Місце роботи, посада
         disease: Хвороби які забороняють Вам здавати кров
+        records:
+          body: Запис
+
     prompts:
       card:
         gender: Стать
