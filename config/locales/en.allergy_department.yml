@@ -1,0 +1,62 @@
+en:
+  allergy_department:
+    index:
+      allergy_wtf: 'What is an allergy or an allergic reaction?'
+      allergy_region: of Cherkasy regional council
+      is_a_allergy: "First of all, it's abnormal reaction to an external irritant factor. Each person has a certain immunity, which protects the body from harmful external factors. However, modern substances that appear in the environment, often cause an unusual reaction of the immune system that affects the entire body."
+      read_more: Read more
+      directions_title: Directions
+      examination: Examination
+      first_title: 'On the basis of the regional hospital has allergenic regional center, which includes: allergy department with 40 beds, including 35 - allergy, 5 - immunological and two specialized classrooms outpatient department: Allergic and manipulation for allergy examination and specific immunotherapy.'
+      second_title: 'Sent to the regional center, patients with newly diagnosed obstructive syndrome, bronchial asthma (atopic, aspirin, asthma physical effort), hay fever, allergy (insect, drug, food and cold), allergic rhinitis and conjunctivitis, urticaria various etiologies, atopic dermatitis, immunodeficiency disorders.'
+      third_title: 'Examination and treatment carried out according to the protocols of care for adults. For diagnostic purposes, except for general clinical, biochemical, bacteriological, virological, immunological examination methods applied allergological tests are fairly wide range.'
+      namely:  'Namely:'
+      a: 'Prik-skin tests with pollen, household, epidermal, insect allergens;'
+      b: 'provocative tests;'
+      c: 'tests for physical urticaria;'
+      d: 'definition IqA, IqG, IqM and clinical immunity;'
+      e: 'definition and general secretory IqA IqE;'
+      f: 'ROK with food allergens;'
+      g: 'EIA IqG + G to gliadin;'
+      h: 'kriohlobulinu determination of blood;'
+      i: 'immunological diagnosis of parasitic infection.'
+      directions: 'Treatment of allergic diseases includes four main areas:'
+      first_label: Education and collaboration with patients
+      second_label: Elimination therapy
+      third_label: Allergy-specific immunotherapy (АСІТ)
+      fourth_label: Pharmacotherapy
+      service_features: Performance
+      indexes: Indexes
+      2013_year: 2013 year
+      2014_year: 2014 year
+      2015_year: 2015 year
+      2016_year: 2016 year
+      planned_bed: Planned bed
+      patients: Treated patients
+      work_bed: Beds
+      average_stay_in_bed: Average stay in bed
+      bed_count: Bed count
+      our_doctors: Our doctors
+      1_doctor_name: Natalia S. Garmash
+      1_doctor_position: head of department
+      doctor_category: category - Higher
+      2_doctor_name: Sherbata Ekaterina Mykolayivna
+      doctor_position: allergist
+      3_doctor_name: Elena Kiseleva Mykolayivna
+      4_doctor_name: Stratiychuk Larissa Yankivna
+      5_doctor_name: Kondratska Evgenia Ivanivna
+      6_doctor_name: Kandul Tetyana Borisivna
+      5_doctor_category: category - First
+
+      address: Address
+      city: Cherkasy
+      country: Ukraine
+      street: st. Mendeleev 3
+      phone_department: "Phone office: (0-472) 45-86-77"
+      phone_department_head: "Phone head office: (0-472) 45-40-87, (0-472) 45-28-12"
+      contact_us: Contact Us
+      write_text_here: 'Enter here ...'
+      your_name: Your name
+      number: Number
+      send: Send
+      allergy: Regional allergy department

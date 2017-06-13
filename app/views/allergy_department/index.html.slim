@@ -1,8 +1,8 @@
 .topbar
   .locale
-    => link_to_unless current_locale?(:en), :EN, locale_path(:en), method: :patch
+    => link_to_unless current_locale?(:en), :EN, locale_path(:en), method: :patch, remote: true
     ' |
-    = link_to_unless current_locale?(:ua), :UA, locale_path(:ua), method: :patch
+    = link_to_unless current_locale?(:ua), :UA, locale_path(:ua), method: :patch, remote: true
   .container
     .absolute
       = link_to root_path
@@ -173,7 +173,7 @@ section.page-section
             .member-img
               = image_tag("a5.jpg", alt: "name", class: "img-responsive")
             h4 =t('.5_doctor_name')
-            span.pos =t('.1_doctor_position')
+            span.pos =t('.doctor_position')
         .col-md-4.col-sm-3.col-xs-4
           .team-member.pDark
             .member-img
