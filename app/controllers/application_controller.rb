@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :set_locale
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(resource)
@@ -19,5 +20,11 @@ class ApplicationController < ActionController::Base
 
   def card_needed?
     current_user && !current_user.card? && !current_user.doctor?
+  end
+
+  private
+
+  def set_locale
+    I18n.locale = session[:locale] || I18n.default_locale
   end
 end
