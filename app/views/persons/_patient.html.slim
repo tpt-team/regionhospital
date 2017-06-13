@@ -1,60 +1,60 @@
 .card
-  h1 = t('cards.card_number', id: @card.id)
+  h1 = t('cards.card_number', id: card.id)
   .row
     .col.col-md-3
-      = image_tag @card.user.avatar
+      = image_tag card.user.avatar
       .card__prompt
-        = t("cards.prompts.dispancery.dispancery_#{@card.dispancery}")
+        = t("cards.prompts.dispancery.dispancery_#{card.dispancery}")
       .card__prompt
-        = t("cards.prompts.gender.gender_#{@card.gender}")
+        = t("cards.prompts.gender.gender_#{card.gender}")
     .col.col-md-9
       .row
         .col.col-md-12.card__name
-          = "#{@card.last_name} #{@card.first_name} #{@card.surname}"
+          = "#{card.last_name} #{card.first_name} #{card.surname}"
           .card__prompt
             = t('cards.prompts.name')
       .row
         .col.col-md-6
-          = @card.home_phone
+          = card.home_phone
           .card__prompt
             = t('cards.prompts.home_phone')
         .col.col-md-6
-          = @card.work_phone
+          = card.work_phone
           .card__prompt
             = t('cards.prompts.work_phone')
   hr
   .row
     .col.col-md-6
-      = @card.location
+      = card.location
       .card__prompt
         = t('simple_form.placeholders.card.location')
     .col.col-md-6
-      = @card.job_info
+      = card.job_info
       .card__prompt
         = t('simple_form.placeholders.card.job_info')
   hr
   .row
     .col.col-md-4
-      = @card.preferential_number
+      = card.preferential_number
       .card__prompt
         = t('simple_form.placeholders.card.preferential_number')
     .col.col-md-4
-      = t('cards.preferential_numbers')[@card.contingent.to_i]
+      = t('cards.preferential_numbers')[card.contingent.to_i]
       .card__prompt
         = t('cards.prompts.contingent')
     .col.col-md-4
-      = @card.preferential_categories
+      = card.preferential_categories
       .card__prompt
         = t('simple_form.placeholders.card.preferential_categories')
   hr
   .row
     .col.col-md-12
-      = @card.disease
+      = card.disease
       .card__prompt
         = t('simple_form.placeholders.card.disease')
 
 .records
   hr
     ol
-      - @records.each do |record|
+      - records.each do |record|
         li = record.body

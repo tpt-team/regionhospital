@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :vascular_surgery, only: :index, as: :vascular
   resources :traumatological_department, only: :index, as: :traumatological
   resources :cards
+  resources :patients
 
   resources :chat_rooms, only: [:new, :create, :show, :index]
   mount ActionCable.server => '/cable'
@@ -18,6 +19,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  devise_for :users, :controllers => {registrations: :registrations}
+  devise_for :users, controllers: { registrations: :registrations }
   get 'persons/profile', as: 'user_root'
 end
