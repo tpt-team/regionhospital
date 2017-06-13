@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :traumatological_department, only: :index, as: :traumatological
   resources :cards
   resources :patients
+  resources :locales, only: :update, constraints: { id: /(en|ua)/ }
 
   resources :chat_rooms, only: [:new, :create, :show, :index]
   mount ActionCable.server => '/cable'
