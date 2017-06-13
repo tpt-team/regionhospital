@@ -1,2 +1,2 @@
 .container
-  = @patient.card.name
+  = render 'persons/patient', { card: @patient.card, records: @patient.card.records}
