@@ -9,6 +9,6 @@ Bundler.require(*Rails.groups)
 module Regionhospital
   class Application < Rails::Application
     config.i18n.available_locales = [:en, :ua]
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :ua
   end
 end
