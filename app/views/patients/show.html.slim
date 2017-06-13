@@ -1,2 +1,3 @@
 .container
+  = link_to t('.edit_card'), edit_card_path(@patient.card)
   = render 'persons/patient', { card: @patient.card, records: @patient.card.records}

@@ -1,0 +1,44 @@
+.container
+  = simple_form_for @card, html: { class: 'card-form' } do |f|
+    h1 = t('cards.new_card')
+    .row
+      .col.col-md-4
+        = f.input :last_name, label: false
+      .col.col-md-4
+         = f.input :first_name, label: false
+      .col.col-md-4
+        = f.input :surname, label: false
+    .row
+      .col.col-md-6
+        = f.input :home_phone, label: false
+      .col.col-md-6
+        = f.input :work_phone, label: false
+    .row
+      .col.col-md-2.card-form__dispancery
+        = f.label :dispancery, class: 'card-form__dis-label'
+        = f.check_box :dispancery, class: 'card-form__dis-check'
+      .col.col-md-5
+        = f.select :gender, [[t('cards.male'), 0], [t('cards.female'), 1]], prompt: t('simple_form.prompts.card.gender')
+      .col.col-md-5
+        = f.select :contingent, t('cards.preferential_numbers').map(&:reverse), prompt: t('simple_form.prompts.card.contingent')
+    .row
+      .col.col-md-6
+        = f.input :preferential_number, label: false
+      .col.col-md-6
+        = f.input :preferential_categories, label: false
+    .row
+      .col.col-md-6
+        = f.input :location, label: false
+      .col.col-md-6
+        = f.input :job_info, label: false
+    .row
+      .col.col-md-12
+        = f.input :disease, label: false
+    h1 =t('.records')
+    = f.simple_fields_for :records do |d|
+      = render 'record_fields', f: d
+    .links
+      = link_to_add_association t('.add_record'), f, :records
+
+    .row.card-form__submit-row
+      = f.button :submit, t('simple_form.submit.cards'), class: 'card-form__submit'

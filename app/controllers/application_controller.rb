@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
     user_root_path
   end
 
+  def doctor?
+    redirect_to root_path, notice: t('.u_are_not_a_doctor') unless current_user.doctor
+  end
+
   def require_user
     redirect_to root_path, notice: t('sign_in.has_to_sign_in') unless current_user
   end

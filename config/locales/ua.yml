@@ -7,7 +7,20 @@ ua:
     sign_in: Увійти
     sign_up: Зареєструватися
     sign_out: Вийти
+  persons:
+    profile:
+      edit_card: Редагувати картку
+    doctor:
+      patients: Пацієнти
+  patients:
+    show:
+      edit_card: Редагувати картку
   cards:
+    edit:
+      u_are_not_a_doctor: Щоб зробити цю дію, Вам потрібно бути лікарем
+    form:
+      add_record: Додати запис
+      records: Записи
     new:
       add_record: Додати запис
       records: Записи
@@ -92,7 +105,7 @@ ua:
       card:
         dispancery: Диспансерна група
     submit:
-      cards: Створити картку
+      cards: Зберегти картку
 
   sign_in:
     has_to_sign_in: Щоб зробити цю дію потрібно авторизуватися

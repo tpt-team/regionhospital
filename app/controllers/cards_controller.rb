@@ -1,6 +1,8 @@
 class CardsController < ApplicationController
   before_action :require_user, only: :create
   before_action :set_card, only: %w(new create)
+  before_action :card, only: %w(edit update)
+  before_action :can_edit?, only: %w(edit update)
 
   def new
     @card.records.build
@@ -15,10 +17,25 @@ class CardsController < ApplicationController
     end
   end
 
+  def update
+    return redirect_to patient_path(@card.user) if @card.update(card_params)
+    render :edit
+  end
+
+  def edit; end
+
   private
 
   def set_card
     @card ||= current_user.build_card
+  end
+
+  def card
+    @card ||= Card.find(params[:id])
+  end
+
+  def can_edit?
+    current_user == card.user || current_user.doctor
   end
 
   def card_params
