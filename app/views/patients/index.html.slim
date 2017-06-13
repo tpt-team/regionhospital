@@ -1,0 +1,3 @@
+.container
+  - @patients.each do |patient|
+    p = link_to patient.card.name,  patient_path(patient)

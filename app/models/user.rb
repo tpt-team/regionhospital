@@ -14,6 +14,8 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   mount_uploader :avatar, AvatarUploader
 
+  scope :patients, -> { where(doctor: false) }
+
   def name_for_chat
     email.split('@')[0]
   end
