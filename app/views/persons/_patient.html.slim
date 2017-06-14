@@ -2,7 +2,10 @@
   h1 = t('cards.card_number', id: card.id)
   .row
     .col.col-md-3
-      = image_tag card.user.avatar
+      - if card.user.avatar.present?
+        = image_tag card.user.avatar
+      - else
+        = image_tag 'images.jpg'
       .card__prompt
         = t("cards.prompts.dispancery.dispancery_#{card.dispancery}")
       .card__prompt
