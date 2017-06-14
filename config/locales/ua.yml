@@ -65,6 +65,7 @@ ua:
         sign_in: Увійти
         exit: Вхід
       user:
+        already_signed_out: Ви успішно вийшли з системи.
         signed_in: Ви успішно увійшли в систему.
         signed_out: Ви успішно вийшли з системи.
     registrations:

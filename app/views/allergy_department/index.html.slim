@@ -147,7 +147,8 @@ section.page-section
         .col-md-4.col-sm-3.col-xs-4
           .team-member.pDark
             .member-img
-              = image_tag("a2.jpg", alt: "name", class: "img-responsive")
+              = link_to doctor_path(id: 77)
+                = image_tag("a2.jpg", alt: "name", class: "img-responsive")
             h4 =t('.1_doctor_name')
             span.pos =t('.1_doctor_position')
         .col-md-4.col-sm-3.col-xs-4
