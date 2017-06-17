@@ -8,9 +8,11 @@
           h1= t('.new_acount')
         form#registerForm
           label.avatar for='user_avatar' =t('.upload')
-          = f.input :avatar, label: false
+          .div#pictureInput = f.input :avatar, label: false
           = f.hidden_field :avatar_cache
+          .div#target
           = f.email_field :email, placeholder: t('.email')
+          = f.input :birthday, label: false, as: :date, html5: true
           = f.password_field :password, autocomplete: "off", placeholder: t('.password')
           = f.password_field :password_confirmation, autocomplete: "off", placeholder: t('.confirmation_password')
           .signup-class

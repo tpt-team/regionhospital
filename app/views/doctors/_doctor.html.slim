@@ -1,0 +1,7 @@
+.container
+  .row
+    .col-md-3
+      = image_tag(@doctor.avatar, class: "style_image")
+    .col-md-8.doctor_profile
+      p = "#{@doctor.firstname} #{@doctor.lastname} #{@doctor.surname}"
+      p = @doctor.position
