@@ -60,4 +60,7 @@
   hr
     ol
       - records.each do |record|
-        li = record.body
+        li.record
+          = image_tag record.image_url
+          p = record.body
+

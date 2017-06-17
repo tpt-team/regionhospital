@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   resources :traumatological_department, only: :index, as: :traumatological
   resources :cards
   resources :patients
-  resources :doctors
+  resources :bookings, only: [:new, :create]
+  resources :doctors, only: [:show, :index]
   resources :locales, only: :update, constraints: { id: /(en|ua)/ }
 
   resources :chat_rooms, only: [:new, :create, :show, :index]
@@ -18,6 +19,8 @@ Rails.application.routes.draw do
   resources :articles, path: 'blog' do
     resources :comments
   end
+
+  resources :persons, only: :update, as: 'profile_update'
 
   root 'welcome#index'
 

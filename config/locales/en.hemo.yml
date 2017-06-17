@@ -1,0 +1,20 @@
+en:
+  hemo:
+    records: Records
+    name: Regional Department Of Hemodialysis
+    start: Get Started
+    heading: What is the hemodialysis
+    learn_more: Get More Information
+    description: Unfortunately, the good health of the kidneys units boast today. When these authorities refuse to deal with his main task - filtering poisoned body through blood products of metabolism, which leads to poor health. Such poisoning is critical boundary between life and death. The body can not remove decay products, they accumulate and accumulate, leading to crashes and other vital organs. Violated chain of physiological interaction of all components. General mechanism ceases to operate smoothly. To achieve all excretion of metabolic products, hemodialysis is performed. Hemodialysis - what is it? It is an effective medical procedure aimed at treating blood.
+    services: 'Provided services:'
+    card:
+      title: Digital card
+      desc: Each patient receives an digital medical record managed by your doctors. Users have access to their cards at any time.
+    doc:
+      title: Online queues
+      desc: Patients can sign up for an appointment from home, at any convenient time.
+    chat:
+      title: Conversations with doctors
+      desc: You can discuss with doctors and other patients questions that you are interested in using our chat site.
+    ask: Do you want to continue?
+    go: Go to the doctors page

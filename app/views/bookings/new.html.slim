@@ -1,0 +1,13 @@
+.col-xs-6
+  = image_tag @doctor.avatar_url(:medium)
+.col-xs-6.doctors-profile
+  h1 = @doctor.doctors_profile.full_name
+  span = doctors_speciality(@doctor.doctors_profile.speciality)
+  p = @doctor.doctors_profile.bio
+
+= simple_form_for Booking.new do |f|
+  = f.input :booked_time, label: false, as: :date
+
+h1 = t('hemo.records')
+- @bookings.each_with_index do |booking, i|
+  p = "#{i + 1}) #{booking.booked_time}"

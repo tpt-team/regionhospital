@@ -1,0 +1,6 @@
+.col-md-2.text-center.c1.docpart
+  = link_to new_booking_path(doctor_id: doctor.id) do
+    = image_tag doctor.avatar_url(:medium)
+    h3= doctor.doctors_profile.full_name
+    p= doctors_speciality(doctor.doctors_profile.speciality)
+

@@ -1,0 +1,112 @@
+.topbar.gray
+  .locale
+    => link_to_unless current_locale?(:en), :EN, locale_path(:en), method: :patch, remote: true
+    ' |
+    = link_to_unless current_locale?(:ua), :UA, locale_path(:ua), method: :patch, remote: true
+  .container
+    .absolute
+      = link_to root_path
+        p
+          i.fa.fa-arrow-left
+body.hemodializ-page
+  = image_tag 'h_banner.jpg', class: 'h-banner'
+  .headtext
+    h1 = t('hemo.name')
+    a.btn.btn-primary.btn-xl.page-scroll href="#one" #{t('hemo.start')}
+  section#one.bg-primary
+    .container
+      .row
+        .col-lg-6.col-lg-offset-3.col-md-8.col-md-offset-2.text-center
+          h2.margin-top-0.text-primary #{t('hemo.heading')}
+          br/
+          p.text-faded
+            = t('hemo.description')
+          a.btn.btn-default.btn-xl.page-scroll href="http://poradumo.com.ua/41331-gemodializ-sho-ce-take-procedyra-gemodializy-pokazannia-vartist-vidgyki/" target='_blank'  #{t('hemo.learn_more')}
+  section#two
+    .container
+      .row
+        .col-lg-12.text-center
+          h2.margin-top-0.text-primary #{t('hemo.services')}
+          hr.primary/
+    .container
+      .row
+        .col-lg-4.col-md-4.text-center
+          .feature
+            i.icon-lg.ion-android-laptop.wow.fadeIn data-wow-delay=".3s"
+            h3 #{t('hemo.card.title')}
+            p.text-muted #{t('hemo.card.desc')}
+        .col-lg-4.col-md-4.text-center
+          .feature
+            i.icon-lg.ion-social-sass.wow.fadeInUp data-wow-delay=".2s"
+            h3 #{t('hemo.doc.title')}
+            p.text-muted #{t('hemo.doc.desc')}
+        .col-lg-4.col-md-4.text-center
+          .feature
+            i.icon-lg.ion-ios-star-outline.wow.fadeIn data-wow-delay=".3s"
+            h3 #{t('hemo.chat.title')}
+            p.text-muted #{t('hemo.chat.desc')}
+  section#three.no-padding
+    .container-fluid
+      .row.no-gutter
+        .col-lg-4.col-sm-6
+          a.gallery-box
+            img.img-responsive alt=("Image 1") src="#{asset_path 'h1.jpg'}" /
+            .gallery-box-caption
+              .gallery-box-content
+                div
+                  i.icon-lg.ion-ios-search
+        .col-lg-4.col-sm-6
+          a.gallery-box
+            img.img-responsive alt=("Image 2") src="#{asset_path 'h2.jpg'}" /
+            .gallery-box-caption
+              .gallery-box-content
+                div
+                  i.icon-lg.ion-ios-search
+        .col-lg-4.col-sm-6
+          a.gallery-box
+            img.img-responsive alt=("Image 3") src="#{asset_path 'h3.jpg'}" /
+            .gallery-box-caption
+              .gallery-box-content
+                div
+                  i.icon-lg.ion-ios-search
+        .col-lg-4.col-sm-6
+          a.gallery-box
+            img.img-responsive alt=("Image 4") src="#{asset_path 'h4.jpg'}" /
+            .gallery-box-caption
+              .gallery-box-content
+                div
+                  i.icon-lg.ion-ios-search
+        .col-lg-4.col-sm-6
+          a.gallery-box
+            img.img-responsive alt=("Image 5") src="#{asset_path 'h5.jpg'}" /
+            .gallery-box-caption
+              .gallery-box-content
+                div
+                  i.icon-lg.ion-ios-search
+        .col-lg-4.col-sm-6
+          a.gallery-box
+            img.img-responsive alt=("Image 6") src="#{asset_path 'h6.jpg'}" /
+            .gallery-box-caption
+              .gallery-box-content
+                div
+                  i.icon-lg.ion-ios-search
+  aside.bg-dark
+    .container.text-center
+      .call-to-action
+        h2.text-primary #{t('hemo.ask')}
+        = link_to t('hemo.go'), doctors_path(department: 'gemo'), class: 'btn btn-default btn-lg wow flipInX'
+      br/
+      hr/
+      br/
+      .row
+        .col-lg-10.col-lg-offset-1
+          .row
+            h6.wide-space.text-center #{t('hemo.name')}
+            .col-sm-3.col-xs-6.text-center
+              i.icon-lg.ion-social-html5-outline title=("html 5")
+            .col-sm-3.col-xs-6.text-center
+              i.icon-lg.ion-social-sass title="sass"
+            .col-sm-3.col-xs-6.text-center
+              i.icon-lg.ion-social-javascript-outline title="javascript"
+            .col-sm-3.col-xs-6.text-center
+              i.icon-lg.ion-social-css3-outline title=("css 3")

@@ -43,6 +43,6 @@ class CardsController < ApplicationController
                                  :work_phone, :dispancery, :gender,
                                  :preferential_number, :location, :job_info,
                                  :contingent, :preferential_categories, :disease,
-                                 records_attributes: [:id, :body, :_destroy, :user_id, :card_id])
+                                 records_attributes: [:id, :body, :_destroy, :user_id, :card_id, :image])
   end
 end
