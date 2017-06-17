@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170613211944) do
+ActiveRecord::Schema.define(version: 20170617153351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 20170613211944) do
     t.datetime "updated_at", null: false
     t.string   "photo"
     t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "booked_time"
+    t.integer  "patient_id"
+    t.integer  "doctor_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "cards", force: :cascade do |t|
@@ -63,12 +71,12 @@ ActiveRecord::Schema.define(version: 20170613211944) do
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
-  create_table "medical_cards", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_medical_cards_on_user_id", using: :btree
+  create_table "doctors_profiles", force: :cascade do |t|
+    t.integer "user_id"
+    t.text    "bio"
+    t.string  "full_name"
+    t.string  "speciality"
+    t.index ["user_id"], name: "index_doctors_profiles_on_user_id", using: :btree
   end
 
   create_table "messages", force: :cascade do |t|
@@ -86,6 +94,7 @@ ActiveRecord::Schema.define(version: 20170613211944) do
     t.integer  "card_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image"
     t.index ["card_id"], name: "index_records_on_card_id", using: :btree
   end
 
@@ -104,11 +113,6 @@ ActiveRecord::Schema.define(version: 20170613211944) do
     t.datetime "updated_at",                          null: false
     t.boolean  "doctor"
     t.string   "avatar"
-    t.string   "firstname"
-    t.string   "lastname"
-    t.date     "birthday"
-    t.string   "phone"
-    t.string   "sex"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
@@ -126,7 +130,6 @@ ActiveRecord::Schema.define(version: 20170613211944) do
   add_foreign_key "chat_rooms", "users"
   add_foreign_key "comments", "articles"
   add_foreign_key "comments", "users"
-  add_foreign_key "medical_cards", "users"
   add_foreign_key "messages", "chat_rooms"
   add_foreign_key "messages", "users"
   add_foreign_key "records", "cards"

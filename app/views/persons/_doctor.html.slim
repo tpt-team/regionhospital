@@ -1,3 +1,18 @@
-h1 Doctor
-.right
-  = link_to t('.patients'), patients_path
+.col-xs-6
+  = image_tag current_user.avatar_url
+.col-xs-6.doctors-profile
+  .right
+    = link_to t('.patients'), patients_path
+  - if current_user.doctors_profile.blank?
+    = simple_form_for current_user, html: { class: '' }, url: profile_update_path(current_user) do |f|
+      = simple_fields_for :doctors_profile do |d|
+        = d.input :bio, label: false, placeholder: t('persons.doctor.bio'), as: :text
+        = d.input :full_name, label: false, placeholder: t('persons.doctor.full_name')
+
+        = d.select :speciality, t('persons.doctor.specs').map { |e| e.reverse }
+        = d.button :submit, t('persons.doctor.submit')
+  - else
+    h1 = current_user.doctors_profile.full_name
+    span = doctors_speciality(current_user.doctors_profile.speciality)
+    p = current_user.doctors_profile.bio
+
