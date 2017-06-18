@@ -14,9 +14,9 @@
       <div class="input-group" style='display: block;'>
         <%= form_for @message, url: '#' do |f| %>
           <%= f.text_area :body, class: 'form-control' %>
-          <small class="text-muted">From 2 to 1000 characters</small>
+          <small class="text-muted">Від 2 до 1000 символів</small>
           <span class="input-group-btn">
-            <%= f.submit "SEND", class: 'btn btn-info' %>
+            <%= f.submit "Відправити", class: 'btn btn-info' %>
           </span>
         <% end %>
       </div>
