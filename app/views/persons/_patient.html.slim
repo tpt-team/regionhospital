@@ -3,7 +3,7 @@
   .row
     .col.col-md-3
       - if card.user.avatar.present?
-        = image_tag card.user.avatar
+        = image_tag card.user.avatar_url
       - else
         = image_tag 'images.jpg'
       .card__prompt
