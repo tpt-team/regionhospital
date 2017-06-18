@@ -105,6 +105,7 @@ GEM
       thor (>= 0.14, < 2.0)
     launchy (2.4.3)
       addressable (~> 2.3)
+    lazybox (1.1.5)
     letter_opener (1.4.1)
       launchy (~> 2.2)
     listen (3.0.8)
@@ -253,6 +254,7 @@ DEPENDENCIES
   google_custom_search_api
   jbuilder (~> 2.5)
   jquery-rails
+  lazybox
   letter_opener
   listen (~> 3.0.5)
   pg (~> 0.18)

@@ -27,6 +27,7 @@ gem 'will_paginate'
 gem 'cocoon'
 gem 'cloudinary'
 gem 'carrierwave'
+gem 'lazybox'
 
 group :development, :test do
   gem 'letter_opener'

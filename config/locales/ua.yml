@@ -14,7 +14,7 @@ ua:
       patients: Пацієнти
       bio: Біографія
       full_name: Повне ім'я
-      submit: Зберегти дані доктора
+      submit: Зберегти дані лікаря
       specs:
         gemo: Гемодіаліз
         alergo: Алергологія
