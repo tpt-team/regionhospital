@@ -15,6 +15,7 @@
 @import 'advice'
 @import 'hemodializ'
 @import 'hemo'
+@import 'lazybox'
 
 .translation_missing
   color: red !important
@@ -59,3 +60,12 @@ a:hover
   bottom: 0
   right: 0
   transition: width, height, border-radius, 0.5s ease-in-out
+
+#lazybox
+  width: 500px
+  height: auto
+  max-height: 500px
+  img
+    width: 100%
+    height: auto
+    max-height: 500px

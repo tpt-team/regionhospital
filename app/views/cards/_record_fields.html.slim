@@ -1,8 +1,9 @@
 .nested-fields.row.large-12.columns
   .large-4.columns
-    = f.input :body, label: false, placeholder: true
-    label.avatar for='img' =t('hemo.upload')
+    label.record-pic for='img'
+      .fa.fa-camera
     .div#pictureInput = f.input :image, label: false, input_html: { id: 'img' }
     .div#target
+    = f.input :body, label: false, placeholder: true
   .large-1.columns
-    = link_to_remove_association t('.remove_record'), f
+    = link_to_remove_association '-', f

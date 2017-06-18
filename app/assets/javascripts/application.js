@@ -17,6 +17,7 @@
 //= require bootstrap-notify
 //= require cable
 //= require cocoon
+//= require lazybox
 //= require_tree .
 
 $(document).on('change', '#pictureInput', function(event) {
@@ -25,7 +26,6 @@ $(document).on('change', '#pictureInput', function(event) {
   var reader = new FileReader();
   reader.onload = function(file) {
     var img = new Image();
-    console.log(file);
     img.src = file.target.result;
     $('#target').html(img);
   }

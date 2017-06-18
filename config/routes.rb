@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       get :advice
     end
   end
+
+  resources :photos, only: [:index, :show]
   resources :vascular_surgery, only: :index, as: :vascular
   resources :traumatological_department, only: :index, as: :traumatological
   resources :cards

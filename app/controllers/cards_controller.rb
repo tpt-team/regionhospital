@@ -35,7 +35,7 @@ class CardsController < ApplicationController
   end
 
   def can_edit?
-    current_user == card.user || current_user.doctor
+    current_user.doctor
   end
 
   def card_params

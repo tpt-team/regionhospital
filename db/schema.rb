@@ -79,6 +79,14 @@ ActiveRecord::Schema.define(version: 20170617153351) do
     t.index ["user_id"], name: "index_doctors_profiles_on_user_id", using: :btree
   end
 
+  create_table "medical_cards", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_medical_cards_on_user_id", using: :btree
+  end
+
   create_table "messages", force: :cascade do |t|
     t.text     "body"
     t.integer  "user_id"
@@ -113,6 +121,11 @@ ActiveRecord::Schema.define(version: 20170617153351) do
     t.datetime "updated_at",                          null: false
     t.boolean  "doctor"
     t.string   "avatar"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.date     "birthday"
+    t.string   "phone"
+    t.string   "sex"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
@@ -130,6 +143,7 @@ ActiveRecord::Schema.define(version: 20170617153351) do
   add_foreign_key "chat_rooms", "users"
   add_foreign_key "comments", "articles"
   add_foreign_key "comments", "users"
+  add_foreign_key "medical_cards", "users"
   add_foreign_key "messages", "chat_rooms"
   add_foreign_key "messages", "users"
   add_foreign_key "records", "cards"

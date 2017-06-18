@@ -61,6 +61,10 @@
     ol
       - records.each do |record|
         li.record
-          = image_tag record.image_url
-          p = record.body
-
+          - if record.image_url.present?
+            .with-photo
+              = link_to image_tag(record.image_url), photo_url(record), remote: true
+              p = record.body
+          - else
+            .without-photo
+              p = record.body

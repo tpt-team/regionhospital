@@ -2,5 +2,5 @@
   - if current_user.doctor?
     = render 'doctor'
   - else
-    = link_to t('.edit_card'), edit_card_path(@card)
+    / = link_to t('.edit_card'), edit_card_path(@card)
     = render 'patient', { card: @card, records: @records}
